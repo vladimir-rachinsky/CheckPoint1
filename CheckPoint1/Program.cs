@@ -8,11 +8,10 @@ namespace CheckPoint1
 {
     public class AutoItem
     {
+        public string Name {get; set;} // Название автомобиля
         public int Cost { get; set; } // Цена автомобиля
-        public short Speed { get; set; } // Скоорость автомобиля
+        public short Speed { get; set; } // Скорость автомобиля
         public byte FuelConsuption { get; set; } // Расход топлива
-        public CarType CarType { get; set; } //Тип автомобиля
-        public EngineType EngineType { get; set; } // Тип двигателя
     }
     public enum CarType // Тип автомобилей
     {
@@ -27,10 +26,33 @@ namespace CheckPoint1
         Diesiel,
         Gas
     }
+
+    public interface IAuto 
+    {
+        string Name { get; }
+        int Cost { get; }
+        short Speed { get; }
+        byte FuelConsumption { get; }
+        CarType CarType { get; }
+        EngineType EngineType { get; }
+    }
+
+
     class Program
     {
         static void Main(string[] args)
         {
+            
         }
     }
+
+    
+
+
+
+
+
+
+
+
 }
