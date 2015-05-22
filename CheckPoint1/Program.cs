@@ -17,7 +17,8 @@ namespace CheckPoint1
     {
         Sedan,
         Miniwan,
-        Limusin,
+        Limuzine,
+        SportCar
 
     }
     public enum EngineType // Тип двигателя
@@ -37,6 +38,22 @@ namespace CheckPoint1
         EngineType EngineType { get; }
     }
 
+    public interface IParkCost
+    {
+        short Speed { get; }
+    }
+
+    public interface ISortByFuelConsuption
+    {
+        string Name { get; }
+        byte FuelConsumption { get; }
+    }
+
+    public interface IFindAutoBySpeed
+    {
+        string Name { get; }
+        short Speed { get; }
+    }
 
     class Program
     {
